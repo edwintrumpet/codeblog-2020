@@ -1,0 +1,9 @@
+## javaScript
+node_modules
+
+## Gatsby
+.cache
+public
+
+## MacOs
+.DS_Store
