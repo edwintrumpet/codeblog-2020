@@ -21,6 +21,8 @@ Personal blog written by Edwin García
 - **`npm i`** => Install dependencies
 - **`npm start`** => Run Gatsby app in develop mode
 - **`npm run build`** => Build static files to production
+- **`npm run lint`** => Checkout linter errors
+- **`npm run lint:fix`** => Fix linter errors
 - **`npm test`** => Run tests
 
 ## Develop
