@@ -1,6 +1,9 @@
 <h1 align="center">Codeblog</h1>
 
 <p align="center">
+  <img src="https://github.com/edwintrumpet/codeblog/workflows/CI/badge.svg" alt="CI badge">
+  <img src="https://github.com/edwintrumpet/codeblog/workflows/CD/badge.svg" alt="CD badge">
+  <img src="https://github.com/edwintrumpet/codeblog/workflows/QA/badge.svg" alt="QA badge">
   <img src="https://img.shields.io/github/commit-activity/m/edwintrumpet/codeblog?logo=github" alt="commit activity badge">
   <img src="https://img.shields.io/github/last-commit/edwintrumpet/codeblog?logo=github" alt="last commit badge">
 </p>
