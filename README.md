@@ -16,6 +16,8 @@
 
 Personal blog written by Edwin García
 
+website http://edwin-garcia.s3-website-us-east-1.amazonaws.com/
+
 ## Scripts
 
 - **`npm i`** => Install dependencies
@@ -33,6 +35,13 @@ To work in this project with the previous scripts execute the following instruct
 - Run Gatsby app in develop mode
 
 ## Deploy
+
+- Staging website http://edwin-garcia-staging.s3-website-us-east-1.amazonaws.com/
+- Production website http://edwin-garcia.s3-website-us-east-1.amazonaws.com/
+
+To deploy app in staging make a pull request to the staging branch.
+
+To deploy app in production make a pull request to the master branch.
 
 To get production static files with the previous scripts execute the following instructions
 
