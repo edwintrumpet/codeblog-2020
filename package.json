@@ -1,0 +1,30 @@
+{
+  "name": "codeblog",
+  "version": "1.0.0",
+  "description": "Personal blog written by Edwin García",
+  "main": "index.js",
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edwintrumpet/codeblog.git"
+  },
+  "keywords": [
+    "gatsby",
+    "blog"
+  ],
+  "author": "Edwin García <spark.com.co@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edwintrumpet/codeblog/issues"
+  },
+  "homepage": "https://github.com/edwintrumpet/codeblog#readme",
+  "dependencies": {
+    "gatsby": "2.24.73",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  }
+}

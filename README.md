@@ -16,6 +16,27 @@
 
 Personal blog written by Edwin García
 
+## Scripts
+
+- **`npm i`** => Install dependencies
+- **`npm start`** => Run Gatsby app in develop mode
+- **`npm run build`** => Build static files to production
+- **`npm test`** => Run tests
+
+## Develop
+
+To work in this project with the previous scripts execute the following instructions
+
+- Install dependencies
+- Run Gatsby app in develop mode
+
+## Deploy
+
+To get production static files with the previous scripts execute the following instructions
+
+- Install dependencies
+- Build static files to production
+
 ## Author
 
 Edwin García  
