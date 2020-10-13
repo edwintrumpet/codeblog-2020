@@ -1,4 +1,8 @@
 module.exports = {
+  siteMetadata: {
+    title: 'Edwin García',
+    subtitle: 'Software developer',
+  },
   plugins: [
     {
       resolve: 'gatsby-plugin-google-fonts',
