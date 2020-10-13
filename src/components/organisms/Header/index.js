@@ -11,13 +11,12 @@ import { Link } from 'gatsby';
 
 import Logo from '../../../assets/icons/Logo';
 import useStyles from './styles';
+import { getMetadata } from '../../../hooks';
 
 function Header({ width }) {
   const classes = useStyles();
 
-  // Import this from metadata
-  const title = 'Edwin García';
-  const subtitle = 'Software developer';
+  const { title, subtitle } = getMetadata();
 
   const sizeLogo = isWidthUp('sm', width) ? 80 : 60;
   const langButton = isWidthUp('sm', width) ? 'Lang-ES' : 'ES';
