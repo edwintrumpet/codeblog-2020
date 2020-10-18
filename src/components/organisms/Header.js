@@ -9,9 +9,9 @@ import {
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 import { Link } from 'gatsby';
 
-import Logo from '../../../assets/icons/Logo';
-import useStyles from './styles';
-import { getMetadata } from '../../../hooks';
+import Logo from '../../assets/icons/Logo';
+import useStyles from '../../styles/components/organisms/Header';
+import { getMetadata } from '../../hooks';
 
 function Header({ width }) {
   const classes = useStyles();
