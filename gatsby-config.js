@@ -19,5 +19,33 @@ module.exports = {
       resolve: 'gatsby-plugin-material-ui',
     },
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'drafts',
+        path: `${__dirname}/content/drafts`,
+        // eslint-disable-next-line no-useless-escape
+        ignore: ['**/\.*'],
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/content/posts`,
+        // eslint-disable-next-line no-useless-escape
+        ignore: ['**/\.*'],
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        commonmark: true,
+        footnotes: true,
+        pedantic: true,
+        gmf: true,
+        plugins: [],
+      },
+    },
   ],
 };
