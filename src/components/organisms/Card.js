@@ -1,16 +1,20 @@
 import React from 'react';
-import { shape, string } from 'prop-types';
+import { Link } from 'gatsby';
 import {
-  Card as MuiCard,
-  CardHeader,
-  Chip,
+  shape as _shape,
+  string as _string,
+} from 'prop-types';
+import {
   Avatar,
-  CardMedia,
-  CardContent,
-  Typography,
+  Card as MuiCard,
   CardActionArea,
   CardActions,
+  CardContent,
+  CardHeader,
+  CardMedia,
+  Chip,
   IconButton,
+  Typography,
 } from '@material-ui/core';
 import { Favorite, Share } from '@material-ui/icons';
 
@@ -23,40 +27,43 @@ export default function Card({ post }) {
     .split(',')
     .slice(0, 3)
     .map((tag) => (
-      <Chip
-        className={classes.chip}
-        variant="outlined"
-        size="small"
-        label={tag}
-        color="secondary"
-        key={tag}
-      />
+      <Link to="/" key={tag}>
+        <Chip
+          className={classes.chip}
+          variant="outlined"
+          size="small"
+          label={tag}
+          color="secondary"
+        />
+      </Link>
     ));
 
   return (
     <MuiCard className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.imageCover}
-          image={post.childMarkdownRemark.frontmatter.cover}
-          title={post.childMarkdownRemark.frontmatter.title}
-        />
-        <CardHeader
-          avatar={(
-            <Avatar>
-              <img className={classes.imageAvatar} src="https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/100670912_10158012645747860_1446573903307603968_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_eui2=AeFCj2j6ABV3pjLMmtU_fm5EsXos9yuUmlWxeiz3K5SaVaK8WFsVK0aYgbNpEfqvTPI&_nc_ohc=PSsM6csgaNIAX8_qi-I&_nc_ht=scontent.fbog2-2.fna&oh=d7236430fbb8e1a3a5da56eceb679988&oe=5FAF7193" alt="author" />
-            </Avatar>
+      <Link to={post.childMarkdownRemark.fields.slug}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.imageCover}
+            image={post.childMarkdownRemark.frontmatter.cover}
+            title={post.childMarkdownRemark.frontmatter.title}
+          />
+          <CardHeader
+            avatar={(
+              <Avatar>
+                <img className={classes.imageAvatar} src="https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/100670912_10158012645747860_1446573903307603968_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_eui2=AeFCj2j6ABV3pjLMmtU_fm5EsXos9yuUmlWxeiz3K5SaVaK8WFsVK0aYgbNpEfqvTPI&_nc_ohc=PSsM6csgaNIAX8_qi-I&_nc_ht=scontent.fbog2-2.fna&oh=d7236430fbb8e1a3a5da56eceb679988&oe=5FAF7193" alt="author" />
+              </Avatar>
         )}
-          title={post.childMarkdownRemark.frontmatter.title}
-          subheader={post.childMarkdownRemark.frontmatter.author}
-        />
-        <CardContent>
-          <Typography>{post.childMarkdownRemark.excerpt}</Typography>
-          <div className={classes.tags}>
-            {tags}
-          </div>
-        </CardContent>
-      </CardActionArea>
+            title={post.childMarkdownRemark.frontmatter.title}
+            subheader={post.childMarkdownRemark.frontmatter.author}
+          />
+          <CardContent>
+            <Typography>{post.childMarkdownRemark.excerpt}</Typography>
+          </CardContent>
+        </CardActionArea>
+      </Link>
+      <CardContent className={classes.tags}>
+        {tags}
+      </CardContent>
       <CardActions>
         <IconButton>
           <Favorite />
@@ -70,17 +77,20 @@ export default function Card({ post }) {
 }
 
 Card.propTypes = {
-  post: shape({
-    childMarkdownRemark: shape({
-      excerpt: string,
-      frontmatter: shape({
-        author: string,
-        cover: string,
-        tags: string,
-        title: string,
-      }),
+  post: _shape({
+    childMarkdownRemark: _shape({
+      excerpt: _string,
+      fields: _shape({
+        slug: _string.isRequired,
+      }).isRequired,
+      frontmatter: _shape({
+        author: _string,
+        cover: _string,
+        tags: _string,
+        title: _string,
+      }).isRequired,
     }),
-    sourceInstanceName: string,
+    sourceInstanceName: _string,
   }),
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { Link } from 'gatsby';
+import { string as _string } from 'prop-types';
 import {
   AppBar,
   Button,
@@ -7,11 +8,10 @@ import {
   Typography,
 } from '@material-ui/core';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
-import { Link } from 'gatsby';
 
 import Logo from '../../assets/icons/Logo';
-import useStyles from '../../styles/components/organisms/Header';
 import { getMetadata } from '../../hooks';
+import useStyles from '../../styles/components/organisms/Header';
 
 function Header({ width }) {
   const classes = useStyles();
@@ -39,8 +39,8 @@ function Header({ width }) {
         </Link>
         <Button
           color="primary"
-          variant="contained"
           disableElevation
+          variant="contained"
         >
           {langButton}
         </Button>
@@ -50,7 +50,7 @@ function Header({ width }) {
 }
 
 Header.propTypes = {
-  width: string,
+  width: _string,
 };
 
 Header.defaultProps = {

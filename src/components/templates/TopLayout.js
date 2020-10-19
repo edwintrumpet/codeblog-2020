@@ -1,11 +1,11 @@
 import React from 'react';
-import { node } from 'prop-types';
+import { node as _node } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { CssBaseline } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/core/styles';
 
-import theme from '../../../styles/muiTheme';
-import { Header } from '../../organisms';
+import theme from '../../styles/muiTheme';
+import { Header } from '../organisms';
 
 export default function TopLayout({ children }) {
   return (
@@ -24,7 +24,7 @@ export default function TopLayout({ children }) {
 }
 
 TopLayout.propTypes = {
-  children: node,
+  children: _node,
 };
 
 TopLayout.defaultProps = {
