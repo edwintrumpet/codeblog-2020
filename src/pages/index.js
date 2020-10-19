@@ -39,18 +39,21 @@ export const query = graphql`
   allFile {
     edges {
       node {
-        sourceInstanceName
         childMarkdownRemark {
+          excerpt(truncate: false, pruneLength: 200)
+          fields {
+                slug
+              }
           frontmatter {
             author
             cover
-            title
             tags
+            title
           }
-          excerpt(truncate: false, pruneLength: 200)
         }
         id
         relativeDirectory
+        sourceInstanceName
       }
     }
   }
