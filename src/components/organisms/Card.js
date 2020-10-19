@@ -40,7 +40,7 @@ export default function Card({ post }) {
 
   return (
     <MuiCard className={classes.card}>
-      <Link to={post.childMarkdownRemark.fields.slug}>
+      <Link to={post.childMarkdownRemark.fields.slug} className={classes.link}>
         <CardActionArea>
           <CardMedia
             className={classes.imageCover}

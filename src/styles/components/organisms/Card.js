@@ -21,4 +21,8 @@ export default makeStyles(() => ({
     marginTop: 8,
     marginRight: 8,
   },
+  link: {
+    color: 'inherit',
+    textDecoration: 'none',
+  },
 }));
