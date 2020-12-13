@@ -6,12 +6,25 @@ tags: backend,javascript,fundamentos de programación,bases de datos,poo,go,java
 ---
 
 Las expresiones regulares nos sirven para representar modelos de patrones que coincidan con textos que sean de nuestro interés.
-
 Con estos patrones podemos realizar búsquedas o filtrar información para solo recibir los datos que nos interesan o solo aceptar un formato válido en la presentación de dicha información.
 
 ## Clases (modelos)
 
 Se pueden representar caracteres o conjuntos de caracteres por medio de expresiones envueltas en corchetes "[ ]". Estas expresiones pueden contener literalmente los caracteres con los que hará coincidencia la clase, por ejemplo:
+
+```py
+class Rectangle:
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    def area(self):
+        return self.base * self.height
+
+class Square:
+    def __init__(self, side):
+        super().__init__(side, side)
+```
 
 `[aym]` coincide con las letras **_a_**, **_y_** y **_m_**.
 

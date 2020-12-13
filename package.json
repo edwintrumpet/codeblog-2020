@@ -27,12 +27,14 @@
   "dependencies": {
     "@material-ui/core": "4.11.0",
     "@material-ui/icons": "4.9.1",
-    "gatsby": "2.24.73",
+    "gatsby": "^2.28.2",
     "gatsby-plugin-google-fonts": "1.0.1",
     "gatsby-plugin-material-ui": "2.1.10",
     "gatsby-plugin-react-helmet": "3.3.14",
+    "gatsby-remark-prismjs": "3.9.0",
     "gatsby-source-filesystem": "2.3.34",
     "gatsby-transformer-remark": "2.8.40",
+    "prismjs": "1.22.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "6.1.0"

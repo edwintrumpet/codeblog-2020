@@ -2,12 +2,15 @@
 import React from 'react';
 import { shape as _shape } from 'prop-types';
 
+import useStyles from '../../styles/components/templates/Post';
+
 export default function PostTemplate({ pageContext }) {
+  const classes = useStyles();
   const { html, frontmatter: { title } } = pageContext;
   return (
-    <div>
+    <div className={classes.root}>
       <h1>{title}</h1>
-      <div className="post__inner" dangerouslySetInnerHTML={{ __html: html }} />
+      <div className={classes.inner} dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );
 }

@@ -44,7 +44,12 @@ module.exports = {
         footnotes: true,
         pedantic: true,
         gmf: true,
-        plugins: [],
+        plugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {},
+          },
+        ],
       },
     },
   ],
